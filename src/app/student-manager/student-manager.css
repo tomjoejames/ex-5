@@ -1,0 +1,98 @@
+:host { display: block; }
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h2 { margin: 0 0 16px; color: #c3002f; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.stats div {
+  background: #fff1f3;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+}
+.stats span {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #c3002f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+input, select {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+}
+input:focus, select:focus { border-color: #c3002f; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #c3002f;
+  color: #fff;
+  font-weight: 600;
+}
+button:disabled { background: #e0aab6; cursor: not-allowed; }
+button.ghost { background: #f1f1f1; color: #333; }
+button.danger { background: transparent; color: #c3002f; padding: 4px 8px; font-weight: 500; }
+button.danger:hover { background: #fff1f3; }
+
+.preview { color: #555; font-size: 14px; }
+.message {
+  background: #e9f9ee;
+  color: #1e7b3c;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.search { margin: 18px 0 10px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid #eee; }
+th { color: #888; font-weight: 600; font-size: 12px; text-transform: uppercase; }
+tr.fail td { color: #c3002f; }
+tr.top td { background: #fffbe6; }
+.grade {
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #f3f3f3;
+  font-weight: 700;
+}
+.empty { text-align: center; color: #999; padding: 20px; }
+
+@media (max-width: 600px) {
+  .form { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  th:nth-child(1), td:nth-child(1) { display: none; }
+}

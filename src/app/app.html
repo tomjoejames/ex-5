@@ -1,0 +1,20 @@
+<header>
+  <h1>{{ title() }}</h1>
+  <p>An Angular component (<code>StudentManager</code>) connected with HTML using data binding.</p>
+</header>
+
+<main>
+  <!--
+    The custom component is used in HTML through its selector <app-student-manager>.
+    [heading]     -> passes data INTO the component (input)
+    (countChange) -> listens to data coming OUT of the component (output)
+  -->
+  <app-student-manager
+    [heading]="'Student Record Manager'"
+    (countChange)="onCountChange($event)"
+  />
+</main>
+
+<footer>
+  Parent component received: <b>{{ studentCount() }}</b> student(s) from the child component.
+</footer>
